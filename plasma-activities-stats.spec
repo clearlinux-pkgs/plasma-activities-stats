@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-activities-stats
-Version  : 6.0.4
-Release  : 3
-URL      : https://download.kde.org/stable/plasma/6.0.4/plasma-activities-stats-6.0.4.tar.xz
-Source0  : https://download.kde.org/stable/plasma/6.0.4/plasma-activities-stats-6.0.4.tar.xz
-Source1  : https://download.kde.org/stable/plasma/6.0.4/plasma-activities-stats-6.0.4.tar.xz.sig
+Version  : 6.0.5
+Release  : 4
+URL      : https://download.kde.org/stable/plasma/6.0.5/plasma-activities-stats-6.0.5.tar.xz
+Source0  : https://download.kde.org/stable/plasma/6.0.5/plasma-activities-stats-6.0.5.tar.xz
+Source1  : https://download.kde.org/stable/plasma/6.0.5/plasma-activities-stats-6.0.5.tar.xz.sig
 Source2  : D7574483BB57B18D.pkey
 Summary  : No detailed summary available
 Group    : Development/Tools
@@ -81,15 +81,15 @@ chmod 700 .gnupg
 gpg --homedir .gnupg --import %{SOURCE2}
 gpg --homedir .gnupg --status-fd 1 --verify %{SOURCE1} %{SOURCE0} > gpg.status
 grep -E '^\[GNUPG:\] (GOODSIG|EXPKEYSIG) D7574483BB57B18D' gpg.status
-%setup -q -n plasma-activities-stats-6.0.4
-cd %{_builddir}/plasma-activities-stats-6.0.4
+%setup -q -n plasma-activities-stats-6.0.5
+cd %{_builddir}/plasma-activities-stats-6.0.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713319018
+export SOURCE_DATE_EPOCH=1716502631
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -126,7 +126,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1713319018
+export SOURCE_DATE_EPOCH=1716502631
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-activities-stats
 cp %{_builddir}/plasma-activities-stats-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/plasma-activities-stats/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
@@ -180,7 +180,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libPlasmaActivitiesStats.so.1
-/usr/lib64/libPlasmaActivitiesStats.so.6.0.4
+/usr/lib64/libPlasmaActivitiesStats.so.6.0.5
 
 %files license
 %defattr(0644,root,root,0755)
