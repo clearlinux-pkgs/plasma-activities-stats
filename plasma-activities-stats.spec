@@ -9,7 +9,7 @@
 #
 Name     : plasma-activities-stats
 Version  : 6.1.5
-Release  : 11
+Release  : 12
 URL      : https://download.kde.org/stable/plasma/6.1.5/plasma-activities-stats-6.1.5.tar.xz
 Source0  : https://download.kde.org/stable/plasma/6.1.5/plasma-activities-stats-6.1.5.tar.xz
 Source1  : https://download.kde.org/stable/plasma/6.1.5/plasma-activities-stats-6.1.5.tar.xz.sig
